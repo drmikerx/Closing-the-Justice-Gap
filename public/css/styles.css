@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#MenuIcon {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#UserHomeTopRow {
+    display: inline;
+}
+
+#UserHomeBody {
+    text-align:center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align:center;
+    margin:0 auto;
+}
+
+#bodyDiv {
+    margin-left: 40;
+    margin-top: 10;
+    margin-bottom: 10;
+    padding: 5;
+    border: 4px solid blue;
+}
+
+
+#mainCenter {
+    text-align: center;
+}
+
+#title {
+}
+
+#login {
+}
+
+#linkSection {
+}
+
+#loginForm {
+}
+
+#rightColumn {
+}
+
+#questionMark {
+    float: right;
+}
+
+#userHomeQuestionMark {
+    position:absolute;
+    top:0;
+    right:150px;
+}
+
+#Logout {
+    position:absolute;
+    top:0;
+    right:25px;
+}
+
+# {
+}
+
+# {
+}

@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS `QuestionCategories`;
+
+CREATE TABLE `QuestionCategories` (
+  `c_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cname` varchar(255) NOT NULL,
+  PRIMARY KEY (`c_id`),
+  UNIQUE KEY `cname` (`cname`)
+) ENGINE=InnoDB;
+
+
+
+DROP TABLE IF EXISTS `QnA`;
+
+CREATE TABLE `QnA` (
+  `q_id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_id` int(11) DEFAULT NULL,
+  `q_text` varchar(1000) NOT NULL,
+  `answer` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`q_id`),
+  FOREIGN KEY (`c_id`) REFERENCES QuestionCategories(`c_id`)
+) ENGINE=InnoDB;
+
+
+INSERT INTO `QuestionCategories` (`cname`)
+VALUES ('Defamation');
+
+
+INSERT INTO `QuestionCategories` (`cname`)
+VALUES ('Tort');
+
+
+INSERT INTO `QuestionCategories` (`cname`)
+VALUES ('Family');
+
+
+INSERT INTO `QuestionCategories` (`cname`)
+VALUES ('Personal Injury');
+
+INSERT INTO QnA SET c_id=(SELECT c_id FROM QuestionCategories WHERE cname='Tort'), q_text='Is tort a dessert?';
+
+
